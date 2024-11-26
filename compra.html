@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/compra.css">
     <link rel="icon" href="image/fusion.ico" type="image/x-icon">
     <script src="js/home.js"></script>
@@ -30,7 +30,7 @@
                         </div>
                     </li>
                     <li><a href="sobre.html">Sobre Nós</a></li>
-                    <li><a href="login.html" class="btn-contato">Contato</a></li>
+                    <li><a href="login.html" class="btn-contato">Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -38,7 +38,7 @@
 
     
     <main>
-        <aside class="filter-section">
+        <section class="filter-section">
             <h2>Filtros de Busca</h2>
 
             <!-- Barra de Pesquisa -->
@@ -48,9 +48,9 @@
             
                 <div class="price-filter">
                     <h3>Faixa de Preço:</h3>
-                    <input type="range" id="price-range" min="5000" max="500000000" step="1">
+                    <input type="range" id="price-range" min="5000" max="500000000" step="5000">
                     <div class="price-display">
-                        <span id="min-price">R$ 5.000</span> - <span id="max-price">R$ 1.000.000.000</span>
+                        <span id="min-price">R$ 5.000</span> - <span id="max-price">R$ 500.000.000.0</span>
                     </div>
                 </div>
 
@@ -91,7 +91,6 @@
                     </ul>
                 </div>
                 
-            
                 <div class="feature-filter">
                     <h3>Características:</h3>
                     <ul class="feature-list">
@@ -109,22 +108,15 @@
                         <li><input type="checkbox" id="modern" value="Moderno"> <label for="modern">Moderno</label></li>
                         <li><input type="checkbox" id="sport" value="Esportivo"> <label for="sport">Esportivo</label></li>
                     </ul>
-                </div>          
-        </aside>
+                </div> 
+        </section>         
 
         <!-- Seção de Resultados -->
         <section class="results-section">
             <h2>Resultados</h2>
-            <div class="car-list">
-                <!-- Exemplo de Card de Carro -->
-                <div class="car-card">
-                    <img src="carro1.jpg" alt="Carro 1">
-                    <h3>Ford Mustang</h3>
-                    <p>Ano: 1967</p>
-                    <p>Preço: R$ 150.000</p>
+                <div class="car-list" id="car-list">
+                    <!-- Carros serão carregados dinamicamente aqui -->
                 </div>
-                <!-- Outros carros seriam carregados aqui dinamicamente -->
-            </div>
         </section>
     </main>
 

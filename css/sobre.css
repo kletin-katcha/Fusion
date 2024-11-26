@@ -1,0 +1,38 @@
+/* Seção Sobre Nós */
+main .sobre-nos {
+    background-color: #222; /* Fundo escuro para contraste */
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+main .sobre-nos h2 {
+    font-size: 2em;
+    color: rgb(200, 150, 255); /* Verde para destacar */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+main .sobre-nos p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #cfcfcf; /* Cinza claro */
+    margin-bottom: 15px;
+}
+
+main .sobre-nos .highlight {
+    color: rgb(200, 150, 255); /* Destaque em verde */
+    font-weight: bold;
+}
+
+main .sobre-nos .cta {
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: rgb(200, 150, 255); /* Verde */
+    font-style: italic;
+}

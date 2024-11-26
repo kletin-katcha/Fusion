@@ -136,10 +136,12 @@ main {
 
 /* Cards de carros ajustados */
 .results-section {
-    width: 76%; /* Aumentando espaço para exibir mais carros */
+    width: 100%;  /* Ajustando para ocupar toda a largura disponível */
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Flexibilidade para o tamanho mínimo dos cards */
+    gap: 20px; /* Maior espaçamento entre os cards */
+    padding: 20px; /* Adicionando padding ao redor do container */
+    box-sizing: border-box;
 }
 
 .car-card {
@@ -157,7 +159,7 @@ main {
 }
 
 .car-card img {
-    width: 100%;
+    width: 100%;  /* Garantindo que a imagem ocupe toda a largura do card */
     border-radius: 10px;
     margin-bottom: 10px;
 }
@@ -171,4 +173,16 @@ main {
 .car-card p {
     font-size: 14px;
     color: #ddd;
+}
+
+@media (max-width: 768px) {
+    .results-section {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Menor tamanho de cards para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .results-section {
+        grid-template-columns: 1fr; /* Exibir um card por linha em dispositivos muito pequenos */
+    }
 }

@@ -1,0 +1,100 @@
+/* Estilos específicos do main na Home */
+
+/* Estilo geral para o main */
+body {
+    background: linear-gradient(to right, #2c2c2c, #363636); /* Fundo gradiente */
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 50px 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Título da página */
+main h1 {
+    font-size: 2.5em;
+    color: rgb(200, 150, 255); /* Destaque em roxo */
+    margin-bottom: 20px;
+}
+
+/* Parágrafos introdutórios */
+main p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #cfcfcf;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: justify;
+}
+
+.services {
+    display: flex;
+    flex-direction: column; /* Para que fiquem um abaixo do outro */
+    margin-top: 30px;
+}
+
+.service {
+    position: relative;
+    height: 450px; /* Ajuste a altura conforme necessário */
+    background-size: cover;
+    background-position: center;
+}
+
+#compra, #reboque{
+    margin: 0;
+    padding: 0;
+}
+
+#compra {
+    background-image: url('../image/carro.jpg');
+}
+
+#reboque {
+    background-image: url('../image/reboque.jpg');
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Filtro para escurecer o fundo */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.overlay h2 {
+    font-size: 28px;
+    color: rgb(200, 150, 255);
+}
+
+.overlay p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0;
+}
+
+.btn-contato {
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: rgb(200, 150, 255); 
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #000000;
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+.btn-contato:hover {
+    color: #000000;
+}

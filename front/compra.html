@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/compra.css">
+    <link rel="icon" href="image/fusion.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <title>Fusion Cars</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html" class="title">Fusion Cars</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown" data-dropdown>
+                        <a href="serviços.html">Serviços</a>
+                        <div class="dropdown-content">
+                            <a href="compra.html">Compra de Carros</a>
+                            <a href="aluguel.html">Locação de Carros</a>
+                            <a href="venda.html">Venda de Carros</a>
+                            <a href="reboque.html">Manutenção de Carros</a>
+                        </div>
+                    </li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="login.html" class="btn-contato">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+    <main>
+        <section class="filter-section">
+            <h2>Filtros de Busca</h2>
+
+            <!-- Barra de Pesquisa -->
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="   Buscar pelo nome ou modelo do carro...">
+                </div>
+            
+                <div class="price-filter">
+                    <h3>Faixa de Preço:</h3>
+                    <input type="range" id="price-range" min="5000" max="500000000" step="5000">
+                    <div class="price-display">
+                        <span id="min-price">R$ 5.000</span> - <span id="max-price">R$ 500.000.000.0</span>
+                    </div>
+                </div>
+
+                 <!-- Filtro de Ano -->
+                <div class="year-list">
+                    <h3>Ano</h3>
+                    <ul class="year-list" id="year-list">
+                        <!-- Os anos serão gerados com JavaScript -->
+                    </ul>
+                </div>
+                
+                <div class="brand-filter">
+                    <h3>Marcas</h3>
+                    <ul class="brand-list">
+                        <li><input type="checkbox" id="brand-toyota" value="Toyota"> <label for="brand-toyota">Toyota</label></li>
+                        <li><input type="checkbox" id="brand-ford" value="Ford"> <label for="brand-ford">Ford</label></li>
+                        <li><input type="checkbox" id="brand-chevrolet" value="Chevrolet"> <label for="brand-chevrolet">Chevrolet</label></li>
+                        <li><input type="checkbox" id="brand-honda" value="Honda"> <label for="brand-honda">Honda</label></li>
+                        <li><input type="checkbox" id="brand-bmw" value="BMW"> <label for="brand-bmw">BMW</label></li>
+                        <li><input type="checkbox" id="brand-mercedes" value="Mercedes-Benz"> <label for="brand-mercedes">Mercedes-Benz</label></li>
+                        <li><input type="checkbox" id="brand-audi" value="Audi"> <label for="brand-audi">Audi</label></li>
+                        <li><input type="checkbox" id="brand-tesla" value="Tesla"> <label for="brand-tesla">Tesla</label></li>
+                        <li><input type="checkbox" id="brand-volkswagen" value="Volkswagen"> <label for="brand-volkswagen">Volkswagen</label></li>
+                        <li><input type="checkbox" id="brand-nissan" value="Nissan"> <label for="brand-nissan">Nissan</label></li>
+                        <!-- Marcas esportivas -->
+                        <li><input type="checkbox" id="brand-ferrari" value="Ferrari"> <label for="brand-ferrari">Ferrari</label></li>
+                        <li><input type="checkbox" id="brand-lamborghini" value="Lamborghini"> <label for="brand-lamborghini">Lamborghini</label></li>
+                        <li><input type="checkbox" id="brand-mclaren" value="McLaren"> <label for="brand-mclaren">McLaren</label></li>
+                        <li><input type="checkbox" id="brand-porsche" value="Porsche"> <label for="brand-porsche">Porsche</label></li>
+                        <li><input type="checkbox" id="brand-bugatti" value="Bugatti"> <label for="brand-bugatti">Bugatti</label></li>
+                        <li><input type="checkbox" id="brand-koenigsegg" value="Koenigsegg"> <label for="brand-koenigsegg">Koenigsegg</label></li>
+                        <li><input type="checkbox" id="brand-astonmartin" value="Aston Martin"> <label for="brand-astonmartin">Aston Martin</label></li>
+                        <li><input type="checkbox" id="brand-rollsroyce" value="Rolls-Royce"> <label for="brand-rollsroyce">Rolls-Royce</label></li>
+                        <!-- Outras marcas populares -->
+                        <li><input type="checkbox" id="brand-jeep" value="Jeep"> <label for="brand-jeep">Jeep</label></li>
+                        <li><input type="checkbox" id="brand-subaru" value="Subaru"> <label for="brand-subaru">Subaru</label></li>
+                        <li><input type="checkbox" id="brand-mazda" value="Mazda"> <label for="brand-mazda">Mazda</label></li>
+                        <li><input type="checkbox" id="brand-lexus" value="Lexus"> <label for="brand-lexus">Lexus</label></li>
+                        <li><input type="checkbox" id="brand-kia" value="Kia"> <label for="brand-kia">Kia</label></li>
+                        <li><input type="checkbox" id="brand-hyundai" value="Hyundai"> <label for="brand-hyundai">Hyundai</label></li>
+                    </ul>
+                </div>
+                
+                <div class="feature-filter">
+                    <h3>Características:</h3>
+                    <ul class="feature-list">
+                        <li><input type="checkbox" id="turbo" value="Turbo"> <label for="turbo">Turbo</label></li>
+                        <li><input type="checkbox" id="biturbo" value="Biturbo"> <label for="biturbo">Biturbo</label></li>
+                        <li><input type="checkbox" id="tuning" value="Tuning"> <label for="tuning">Tuning</label></li>
+                    </ul>
+                </div>
+            
+                <div class="category-filter">
+                    <h3>Categorias:</h3>
+                    <ul class="category-list">
+                        <li><input type="checkbox" id="relic" value="Relíquia"> <label for="relic">Relíquia</label></li>
+                        <li><input type="checkbox" id="classic" value="Clássico"> <label for="classic">Clássico</label></li>
+                        <li><input type="checkbox" id="modern" value="Moderno"> <label for="modern">Moderno</label></li>
+                        <li><input type="checkbox" id="sport" value="Esportivo"> <label for="sport">Esportivo</label></li>
+                    </ul>
+                </div> 
+        </section>         
+
+        <!-- Seção de Resultados -->
+        <section class="results-section">
+            <h2>Resultados</h2>
+                <div class="car-list" id="car-list">
+                    <!-- Carros serão carregados dinamicamente aqui -->
+                </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Fusion Cars . Todos os direitos reservados.</p>
+            <ul class="interface">
+                <div class="social">
+                    <div class="face">
+                    <a href="https://www.facebook.com" target="_blank"><i class="bi bi-facebook" style="font-family:Kode Mono"></i></a>
+                    </div>
+                    <div class="x">
+                    <a href="https://www.twitter.com" target="_blank"><i class="bi bi-twitter" style="font-family:Kode Mono"></i></a>
+                    </div>
+                    <div class="link">
+                    <a href="https://www.linkedin.com" target="_blank"><i class="bi bi-linkedin" style="font-family:Kode Mono"></i></a>
+                    </div>
+                    <div class="insta">
+                    <a href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram" style="font-family:Kode Mono"></i></a>
+                    </div>
+                    <div class="github">
+                    <a href="https://github.com/kletin-katcha" target="_blank"><i class="bi bi-github" style="font-family:Kode Mono"></i></a>
+                    </div>
+                    <div class="gmail">
+                    <a href="https://discord.gg" target="_blank"><i class="bi bi-envelope" style="font-family:Kode Mono"></i></a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </footer>
+
+
+    <script src="js/compra.js"></script>
+</body>
+</html>

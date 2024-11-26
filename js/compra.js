@@ -7,9 +7,10 @@ const searchInput = document.getElementById('search-input');
 
 // Lista de carros (exemplo)
 const cars = [
-    { id: 1, name: 'Ford Mustang', year: 1967, price: 490000, image: 'carro1.jpg' },
-    { id: 2, name: 'Chevrolet Camaro', year: 2020, price: 432000, image: 'carro2.jpg' },
-    { id: 3, name: 'Tesla Model S', year: 2021, price: 745000, image: 'carro3.jpg' },
+    { id: 1, name: 'Ford Mustang', year: 1967, price: 490000, image: 'image/ford.jpg' },
+    { id: 2, name: 'Chevrolet Camaro', year: 2020, price: 432000, image: 'image/camaro.jpg' },
+    { id: 3, name: 'Dodge Challenger', year: 2015, price: 839000, image: 'image/dodge.jpg' },
+    { id: 4, name: 'Bugatti Chyron', year: 2021, price: 21000000, image: 'image/bugatti.jpg' },
     // Adicione mais carros aqui
 ];
 
@@ -21,6 +22,8 @@ priceRange.addEventListener('input', (e) => {
     // Chama a função para filtrar os carros após movimentação do trilho
     filterCars();
 });
+
+priceRange.value = minBase;
 
 // Função para filtrar os carros com base no preço
 function filterCars() {

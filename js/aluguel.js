@@ -11,8 +11,10 @@ const searchInput = document.getElementById('search-input');
 
 // Lista de carros (exemplo)
 const cars = [
-    { id: 1, name: 'Ford Mustang', year: 1967, price: 1500, image: 'carro1.jpg' },
-    { id: 2, name: 'Chevrolet Camaro', year: 2020, price: 2500, image: 'carro2.jpg' },
+    { id: 1, name: 'Ford Mustang', year: 1967, price: 1500, image: 'image/ford.jpg' },
+    { id: 2, name: 'Chevrolet Camaro', year: 2020, price: 2500, image: 'image/camaro.jpg' },
+    { id: 3, name: 'Dodge Challenger', year: 2015, price: 4500, image: 'image/dodge.jpg' },
+    { id: 4, name: 'Bugatti Chyron', year: 2021, price: 15000, image: 'image/bugatti.jpg' },
     // Adicione mais carros aqui
 ];
 

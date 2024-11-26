@@ -37,13 +37,30 @@
     </header>
 
     <main>
-        <main>
-            <h1>Bem-vindo ao nosso site de compra, aluguel e serviços de carro</h1>
-            <p>O site oferece uma plataforma completa para quem busca soluções no setor automotivo, com serviços de <strong>compra</strong>, <strong>aluguel</strong> e <strong>outros serviços relacionados a carros</strong>.</p>
-            <p>O usuário pode explorar uma vasta gama de veículos novos e usados à venda, com informações detalhadas sobre cada modelo, condições de pagamento e opções de financiamento. Para quem precisa de um carro por um período específico, a plataforma também disponibiliza opções de <strong>aluguel de veículos</strong>, com flexibilidade de locação por dias, semanas ou meses.</p>
-            <p>Além disso, o site oferece serviços adicionais como <strong>manutenção</strong> e <strong>assistência veicular</strong>, possibilitando que os clientes agendem reparos ou serviços preventivos. A plataforma é fácil de navegar, com filtros de busca que permitem encontrar rapidamente o carro ideal, de acordo com preferências de marca, modelo, preço e características específicas.</p>
-            <p>O objetivo é proporcionar uma experiência completa e conveniente para todos os aspectos da compra, aluguel e cuidado de carros.</p>
-          </main>
+        <h2>Pedir Ajuda para Reboque</h2>
+        <form action="submit_reboque.php" method="post">
+            <div>
+                <label for="local">Local onde se encontra:</label>
+                <input type="text" id="local" name="local" required>
+            </div>
+            <div>
+                <label for="telefone">Número de Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+            </div>
+            <div>
+                <label for="modelo_carro">Modelo do Carro:</label>
+                <input type="text" id="modelo_carro" name="modelo_carro" required>
+            </div>
+            <div>
+                <label for="nome_carro">Nome do Carro:</label>
+                <input type="text" id="nome_carro" name="nome_carro" required>
+            </div>
+            <div>
+                <label for="problema">Descrição do Problema:</label>
+                <textarea id="problema" name="problema" rows="5" required></textarea>
+            </div>
+            <button type="submit">Solicitar Reboque</button>
+        </form>
     </main>
 
     <footer>

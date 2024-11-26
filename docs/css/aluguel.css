@@ -1,0 +1,203 @@
+body {
+    background-color: #2d2d2d;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    gap: 15px;
+}
+
+/* Ajustando o tamanho do quadro de filtros */
+.filter-section {
+    width: 22%; /* Ligeiramente maior para acomodar mais filtros */
+    padding: 15px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    border: 1px solid #6a4e9b;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.filter-section h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    color: #9e9e9e;
+    border-bottom: 1px solid #6a4e9b;
+    padding-bottom: 5px;
+}
+
+/* Barra de busca compacta e estilizada */
+.search-bar {
+    margin-bottom: 15px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 8px 0;
+    border: 1px solid #6a4e9b;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #2d2d2d;
+    color: white;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: #9a6de5;
+}
+
+/* Slider de preço ajustável */
+.price-filter {
+    margin-bottom: 15px;
+}
+
+.price-filter input[type="range"] {
+    width: 100%; /* Largura total */
+    border: 1px solid #6a4e9b; /* Borda ao redor do trilho do ajuste de preço */
+    border-radius: 5px; /* Borda arredondada para o trilho */
+    background-color: #3c3c3c; /* Cor de fundo do trilho */
+    -webkit-appearance: none; /* Remove estilo nativo do input tipo range */
+    appearance: none; /* Para ter controle completo sobre a aparência */
+    height: 6px; /* Largura do trilho */
+}
+
+.price-filter input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remover estilo do thumb */
+    appearance: none; /* Remover estilo nativo do thumb */
+    width: 15px; /* Tamanho do thumb */
+    height: 15px; /* Tamanho do thumb */
+    background-color: #6a4e9b; /* Cor do thumb */
+    border-radius: 50%; /* Thumb arredondado */
+    cursor: pointer;
+}
+
+.price-filter input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: #6a4e9b;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.price-display {
+    font-size: 12px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    color: #9e9e9e;
+}
+
+/* Listas de anos e marcas com scroll */
+.year-list, .brand-list {
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.year-list{
+    padding: 0;
+    margin-bottom: 15px;
+    list-style: none;
+    max-height: 350px; /* Defina o limite de altura */
+    overflow-y: hidden; /* Aplica rolagem apenas para a lista de anos */
+}
+
+.year-list ul, .brand-list ul {
+    margin-bottom: 3px;
+    font-size: 12px;
+}
+
+.filter-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filter-section input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.filter-section label {
+    font-size: 12px;
+}
+
+/* Categorias e tuning (nova seção) */
+.category-list, .tuning-list {
+    margin-bottom: 15px;
+}
+
+.category-list li, .tuning-list li {
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+/* Cards de carros ajustados */
+.results-section {
+    width: 76%; /* Aumentando espaço para exibir mais carros */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.car-card {
+    background-color: #1e1e1e;
+    border: 2px solid #6a4e9b;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(106, 78, 155, 0.5);
+}
+
+.car-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.car-card h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #f1f1f1;
+}
+
+.car-card p {
+    font-size: 14px;
+    color: #ddd;
+}
+
+.rental-filter select {
+    width: 100%;
+    padding: 8px 0;
+    border: 1px solid #6a4e9b;
+    border-radius: 5px;
+    background-color: #2d2d2d;
+    color: white;
+    font-size: 14px;
+}
+
+.rental-filter input {
+    width: 100%;
+    padding: 9px 0;
+    border: 1px solid #6a4e9b;
+    border-radius: 5px;
+    background-color: #2d2d2d;
+    color: white;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+#year-list {
+    overflow-y: auto;
+    height: 200px;  /* ou qualquer valor que se encaixe no seu design */
+}
